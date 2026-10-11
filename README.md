@@ -35,11 +35,14 @@ either a remove.bg API key or Python with `rembg` — see `AI_API_SETUP.md`.
 cd server && npm install
 cd ../client && npm install
 
-# 2. configure (from the project root)
+# 2. download the face-detection model (not stored in git)
+python3 server/download_model.py   # saves server/yunet.onnx (~230KB)
+
+# 3. configure (from the project root)
 cp .env.example server/.env
 # edit server/.env — at minimum choose BG_PROVIDER (none works for trying the UI)
 
-# 3. run (two terminals)
+# 4. run (two terminals)
 cd server && npm run dev     # API on :4000
 cd client && npm run dev     # UI on :5173
 ```
