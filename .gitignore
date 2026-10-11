@@ -1,0 +1,27 @@
+# Dependencies
+node_modules/
+client/node_modules/
+server/node_modules/
+
+# Build outputs
+client/dist/
+server/dist/
+
+# Runtime data (uploads, processed images, job records)
+server/.tmp/
+*.tmp
+
+# Env files (never commit secrets)
+.env
+server/.env
+!.env.example
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Logs
+*.log
+npm-debug.log*
